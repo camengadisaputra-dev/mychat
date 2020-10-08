@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" appGestures (swipe)="onSwipe($event)">
   <ion-item *ngFor="let contact of contacts">
     <ion-avatar slot="start">
       <img [src]="contact.profilePic">

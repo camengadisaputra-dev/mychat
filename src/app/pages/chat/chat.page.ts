@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat',
@@ -16,9 +17,15 @@ export class ChatPage implements OnInit {
     profilePic: 'https://camengadisaputra-dev.github.io/picsample/img2.jpg',
     recentMessage: 'right'
   }];
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onSwipe($event) {
+    if ($event === 'right') {
+      this.router.navigate(['/tabs/status']);
+    }
   }
 
 }

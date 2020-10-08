@@ -17,13 +17,13 @@ const routes: Routes = [
         loadChildren: () => import('../status/status.module').then( m => m.StatusPageModule)
       },
       {
+        path: 'contacts',
+        loadChildren: () => import('../contacts/contacts.module').then( m => m.ContactsPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/chat',
         pathMatch: 'full'
-      },
-      {
-        path: 'contacts',
-        loadChildren: () => import('../contacts/contacts.module').then( m => m.ContactsPageModule)
       },
     ],
   },
