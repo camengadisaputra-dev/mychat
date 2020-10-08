@@ -1,13 +1,6 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Chat 
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<app-header></app-header>
 <ion-content [fullscreen]="true" appGestures (swipe)="onSwipe($event)">
-  <ion-item *ngFor="let contact of contacts">
+  <ion-item *ngFor="let contact of contacts" (click)="openMessage(contact)">
     <ion-avatar slot="start">
       <img [src]="contact.profilePic">
     </ion-avatar>
@@ -17,5 +10,18 @@
       </h2>
       <p>{{contact.recentMessage}}</p>
     </ion-label>
+    <div class="ion-text-end">
+      <ion-label>
+        <p>
+          {{contact.timeStamp}}
+        </p>
+        <ion-badge color="danger" slot="end">2</ion-badge>
+      </ion-label>
+    </div>
   </ion-item>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="newMessage()">
+    <ion-fab-button>
+      <ion-icon name="chatbubbles-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

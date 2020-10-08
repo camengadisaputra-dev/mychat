@@ -8,6 +8,7 @@ import { ChatPageRoutingModule } from './chat-routing.module';
 
 import { ChatPage } from './chat.page';
 import { GesturesModule } from '@app/directives/gestures/gestures.module';
+import { HeaderModule } from '@app/components/header/header.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { GesturesModule } from '@app/directives/gestures/gestures.module';
     FormsModule,
     IonicModule,
     ChatPageRoutingModule,
-    GesturesModule
+    GesturesModule,
+    HeaderModule
   ],
   declarations: [ChatPage]
 })

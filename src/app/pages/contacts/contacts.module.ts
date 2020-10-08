@@ -8,6 +8,7 @@ import { ContactsPageRoutingModule } from './contacts-routing.module';
 
 import { ContactsPage } from './contacts.page';
 import { GesturesModule } from '@app/directives/gestures/gestures.module';
+import { HeaderModule } from '@app/components/header/header.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { GesturesModule } from '@app/directives/gestures/gestures.module';
     FormsModule,
     IonicModule,
     GesturesModule,
-    ContactsPageRoutingModule
+    ContactsPageRoutingModule,
+    HeaderModule
   ],
   declarations: [ContactsPage]
 })
