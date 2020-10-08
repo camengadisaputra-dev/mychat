@@ -1,0 +1,8 @@
+{
+  "name": "mychat",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "9ca9f28e"
+}

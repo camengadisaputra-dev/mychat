@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Chat 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let contact of contacts">
+    <ion-avatar slot="start">
+      <img [src]="contact.profilePic">
+    </ion-avatar>
+    <ion-label>
+      <h2>
+        {{contact.username}} 
+      </h2>
+      <p>{{contact.recentMessage}}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>
